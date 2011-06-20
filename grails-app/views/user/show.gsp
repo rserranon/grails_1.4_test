@@ -43,6 +43,9 @@
 			
 			</ol>
 			<g:form>
+			
+			<g:fbInfo/>
+			
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />
 					<g:link class="edit" action="edit" id="${userInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>

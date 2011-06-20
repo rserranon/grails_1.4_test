@@ -15,6 +15,10 @@
 			</ul>
 		</div>
 		<div id="create-user" class="content scaffold-create" role="main">
+			<fb:login-button perms="email,publish_stream" onlogin="facebookLogin();" size="large">
+				<g:message code="auth.login.facebook"/>
+			</fb:login-button>
+			
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
