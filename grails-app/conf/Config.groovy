@@ -88,3 +88,7 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+
+facebook.applicationSecret='f5d6b820023e084ebae1194f935bdc8a'
+facebook.applicationId='232001656810776'
