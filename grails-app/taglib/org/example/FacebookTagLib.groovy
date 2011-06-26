@@ -3,6 +3,7 @@ package org.example
 import grails.converters.JSON
 class FacebookTagLib {
   def facebookGraphService
+
     def fbInfo = { attrs ->
         if (session.facebook) {
           def myInfo = JSON.parse (facebookGraphService.getFacebookProfile().toString() )
@@ -15,6 +16,23 @@ class FacebookTagLib {
           out << "<br/>Home Town:" << myInfo.hometown
           out << "<br/>Link:" << myInfo.link
           out << "<br/>Photo:" << "<img src='${facebookGraphService.getProfilePhotoSrc(myInfo.id);}'/>"
+
+        } else {
+          out << "Not logged in to Facebook"
+        }
+    }
+
+	def fbFriends = { attrs ->
+        if (session.facebook) {
+          def myFriends = JSON.parse (facebookGraphService.getFriends().toString() )
+
+		  def myFriendsList = myFriends.data
+		
+		  println myFriendsList.each { it.value }
+
+          out <<  "Este es"
+          
+          // out << "<br/>Photo:" << "<img src='${facebookGraphService.getProfilePhotoSrc(myInfo.id);}'/>"
 
         } else {
           out << "Not logged in to Facebook"

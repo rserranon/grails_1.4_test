@@ -45,6 +45,7 @@
 			<g:form>
 			
 			<g:fbInfo/>
+			<g:fbFriends/>
 			
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />
