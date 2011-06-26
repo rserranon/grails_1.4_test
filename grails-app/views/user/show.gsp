@@ -46,6 +46,7 @@
 			
 			<g:fbInfo/>
 			<g:fbFriends/>
+			<g:fbPublishWall mensaje="Envío de Mensaje desde mi App de prueba de Facebook!"/>  
 			
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />

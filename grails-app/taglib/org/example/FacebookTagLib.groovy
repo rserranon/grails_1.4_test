@@ -30,9 +30,21 @@ class FacebookTagLib {
 		
 		  println myFriendsList.each { it.value }
 
-          out <<  "Este es"
+          out <<  "Este es <br>"
           
           // out << "<br/>Photo:" << "<img src='${facebookGraphService.getProfilePhotoSrc(myInfo.id);}'/>"
+
+        } else {
+          out << "Not logged in to Facebook"
+        }
+    }
+
+	def fbPublishWall = { attrs ->
+        if (session.facebook) {
+			
+          facebookGraphService.publishWall(attrs.mensaje)
+
+          out <<  "Se envio mensaje: ${attrs.mensaje}"
 
         } else {
           out << "Not logged in to Facebook"
