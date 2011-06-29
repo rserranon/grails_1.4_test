@@ -25,14 +25,10 @@ class FacebookTagLib {
 	def fbFriends = { attrs ->
         if (session.facebook) {
           def myFriends = JSON.parse (facebookGraphService.getFriends().toString() )
-
-		  def myFriendsList = myFriends.data
-		
-		  println myFriendsList.each { it.value }
-
-          out <<  "Este es <br>"
-          
-          // out << "<br/>Photo:" << "<img src='${facebookGraphService.getProfilePhotoSrc(myInfo.id);}'/>"
+		  out << "<br/> Amigos: <br/>"		
+		  myFriends.data.each { 
+			out << "<img src='${facebookGraphService.getProfilePhotoSrc(it.id);}'/>"
+		  }
 
         } else {
           out << "Not logged in to Facebook"
