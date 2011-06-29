@@ -1,0 +1,40 @@
+# .gitignore for Grails 1.0.3
+
+# web application files that are overwritten by "grails upgrade"
+#  cf. GRAILS_HOME/scripts/Upgrade.groovy, target( upgrade )
+/web-app/WEB-INF
+
+# IDE support files that are overwritten by "grails upgrade"
+#  cf. GRAILS_HOME/scripts/CreateApp.groovy, target( createIDESupportFiles )
+# to be specific, you could replace "/*" below with your project name,
+#  e.g. "foobar.launch" (no slash)
+.classpath
+.project
+.settings
+/*.launch
+/*.tmproj
+
+# Builds
+/target
+
+# logs
+stacktrace.log
+/test/reports
+
+# project release file
+*.war
+myDebuglog.log
+grails-app/views/earthlingtwo/.svn/entries
+grails-app/views/earthlingtwo/.svn/text-base/_footer.gsp.svn-base
+grails-app/views/earthlingtwo/.svn/text-base/_header.gsp.svn-base
+grails-app/views/earthlingtwo/.svn/text-base/_menu.gsp.svn-base
+grails-app/views/earthlingtwo/.svn/text-base/_sidebar.gsp.svn-base
+grails-app/views/earthlingtwo/.svn/all-wcprops
+web-app/earthlingtwo/.svn/all-wcprops
+web-app/earthlingtwo/.svn/entries
+web-app/earthlingtwo/.svn/prop-base/index.html.svn-base
+web-app/earthlingtwo/.svn/prop-base/license.txt.svn-base
+web-app/earthlingtwo/.svn/prop-base/style.css.svn-base
+web-app/earthlingtwo/.svn/text-base/index.html.svn-base
+web-app/earthlingtwo/.svn/text-base/license.txt.svn-base
+web-app/earthlingtwo/.svn/text-base/style.css.svn-base
