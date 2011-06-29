@@ -47,4 +47,16 @@ class FacebookTagLib {
         }
     }
 
+	def fbLogOut = { attrs ->
+        if (session.facebook) {
+			
+          session.facebook = [:] // we remove the session data
+
+          out <<  "Logged Out"
+
+        } else {
+          out << "Already  Logged Out"
+        }
+    }
+
 }

@@ -46,12 +46,16 @@
 			
 			<g:fbInfo/>
 			<g:fbFriends/>
-			<g:fbPublishWall mensaje="Envío de Mensaje desde mi App de prueba de Facebook!"/>  
+			<g:if test="${session.facebook}" >
+					<g:fbLogOut/>
+			</g:if>
+			
+			<!-- <g:fbPublishWall mensaje="Envío de Mensaje desde mi App de prueba de Facebook!"/>  Deshabilitar momentaneamente-->
 			
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />
 					<g:link class="edit" action="edit" id="${userInstance?.id}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
-					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
+					<g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="f;" />
 				</fieldset>
 			</g:form>
 		</div>
